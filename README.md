@@ -8,7 +8,7 @@ This repository holds the source code for Stride's "Debt to Earnings" dashboard.
 1. Add raw data files to the directory `data/`
 1. Run `docker-compose up --build`
 
-If everything worked you should be able to hit http://localhost:80 and see your dashboard
+If everything worked you should be able to hit http://localhost:8001 and see your dashboard
 
 # How to Contribute
 
