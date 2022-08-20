@@ -56,8 +56,6 @@ def main():
     st.table(zip_by_state_df)
     st.write("© Stride Funding, Inc. 2022")
 
-    conn.close()
-
 
 if __name__ == "__main__":
     main()
