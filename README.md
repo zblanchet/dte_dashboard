@@ -3,9 +3,10 @@ This repository holds the source code for Stride's "Debt to Earnings" dashboard.
 
 # How to Run
 
-* Clone this repository
-* Install Docker and Docker-Compose if you do not yet have them
-* Run `docker-compose up`
+1. Clone this repository
+1. Install Docker and Docker-Compose if you do not yet have them
+1. Add raw data files to the directory `data/`
+1. Run `docker-compose up --build`
 
 If everything worked you should be able to hit http://localhost:80 and see your dashboard
 
@@ -21,19 +22,19 @@ If everything worked you should be able to hit http://localhost:80 and see your 
 # Architecture
 
 ## Containers / Services
- - db: a local PostgreSQL database
- - dashboard: a simple Streamlit dashboard  
- - loader: python basic ETL of raw data to a format used by the dashboard
+ - `db`: a local PostgreSQL database
+ - `dashboard`: a simple Streamlit dashboard  
+ - `loader`: python basic ETL of raw data to a format used by the dashboard
 
 ## Components
 
 This is a fairly simple Data Science dashboard using a few logical components.
 
-- docker: used for containerization
-- doocker-compose: used to run multiple Docker containers
-- pandas: Python Data Science library. Used for basic data analysis
-- postgresql: database used for SQL querying of the data sets  
-- streamlit: a Python library for building simple pandas based web pages or dashboards
+- `docker`: used for containerization
+- `docker-compose`: used to run multiple Docker containers
+- `pandas`: Python Data Science library. Used for basic data analysis
+- `postgresql`: database used for SQL querying of the data sets  
+- `streamlit`: a Python library for building simple pandas based web pages or dashboards
 
 ## Data Sets
 
