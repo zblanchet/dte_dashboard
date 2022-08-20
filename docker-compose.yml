@@ -1,5 +1,7 @@
 version: '3.9'
+
 services:
+
   dashboard:
     build:
       context: ./dashboard
@@ -12,12 +14,13 @@ services:
       POSTGRES_HOST: db
       POSTGRES_PORT: 5432
       POSTGRES_USER: postgres
-      POSTGRES_DB: data
+      POSTGRES_DB: postgres
       POSTGRES_PASSWORD: postgres
     ports:
       - 8001:80
     networks:
       - stride
+
   db:
     image: postgres:latest
     container_name: postgres
@@ -31,15 +34,19 @@ services:
       - 54321:5432
     networks:
       - stride
+
   loader:
     build:
       context: ./loader
       dockerfile: Dockerfile
     container_name: loader
+    depends_on:
+      - db
     networks:
       - stride
     volumes:
       - ./data:/data
+
 networks:
   stride:
     driver: bridge
