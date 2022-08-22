@@ -13,7 +13,7 @@ If everything worked you should be able to hit http://localhost:8001 and see you
 # How to Contribute
 
 * Create a private fork of this repository
-* Invite Stride to your fork (invite the username `kenney`)
+* Invite Stride to your fork (username [`StrideTechHiring`](https://github.com/StrideTechHiring))
 * Create a branch or relevant Pull Requests on your fork showing your work
 * Provide instructions for the Stride squad on running your latest work
 
