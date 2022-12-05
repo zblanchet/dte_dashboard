@@ -1,11 +1,17 @@
 # Debt to Earnings
 This repository holds the source code for Stride's "Debt to Earnings" dashboard.
 
+
+## TO DO
+ - Using main.py, launch the docker containers using the docker library and logically restart the loader script in timed increments to check for new data.
+ - Create ingestion pipeline to automatically download the source googlesheets to the repo. 
+ - Improve the appearance, functionality, and datasets in the dashboard.
+
 # How to Run
 
 1. Clone this repository
 1. Install Docker and Docker-Compose if you do not yet have them
-1. Add raw data files to the directory `data/`
+1. Add raw data files to the directory `data/`. Files from December 2022 included.
 1. Run `docker-compose up --build`
 
 If everything worked you should be able to hit http://localhost:8001 and see your dashboard
@@ -40,8 +46,8 @@ This is a fairly simple Data Science dashboard using a few logical components.
 
 This dashboard uses two datasets:
 
-- Price to Earnings
-- Zip Codes
+- CollegeScorecard-Institution-Subset.csv
+- CollegeScorecard-Programs-DTE-Subset.csv
 
 ## How to Run
 `docker-compose up`
